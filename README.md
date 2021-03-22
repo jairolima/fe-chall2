@@ -1,11 +1,11 @@
 <!-- You have to use Next Js as your framework. -->
 <!-- Use typescript. -->
-The buttons, cards and detailed products must be Reusable Components.
-Use Styled Components to style your components.
-You have to use Grid Layout for the structure of the pages and Flexbox for the Components.
-All content needs to be consumed through the Fake Store API.
-If the fake store API is out, you can consume alternative API.
-For the services, use jamstack architecture avaliable in next js to create your routes.
+<!-- The buttons, cards and detailed products must be Reusable Components. -->
+<!-- Use Styled Components to style your components. -->
+<!-- You have to use Grid Layout for the structure of the pages and Flexbox for the Components. -->
+<!-- All content needs to be consumed through the Fake Store API. -->
+<!-- If the fake store API is out, you can consume alternative API. -->
+<!-- For the services, use jamstack architecture avaliable in next js to create your routes. -->
 Home page must be a static page.
 For the other pages, you have to use server side rendering avaliable in next js.
 Each category and product page must be a dinamic page in next js pages folder

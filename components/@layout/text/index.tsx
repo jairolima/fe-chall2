@@ -13,14 +13,15 @@ interface TextProps {
     ml?: string;
     mr?: string;
 
-    px?: string;
+    pl?: string;
+    pr?: string;
   }
 
 
 
 export const Text = styled.p<TextProps>`
   margin: 0;
-  color: ${props => props.color || ''};
+  color: ${props => props.color || props.theme.colors.gray400};
   font-style: normal;
   font-variant: normal;
   font-weight: ${props => props.weight || ''};
@@ -33,14 +34,9 @@ export const Text = styled.p<TextProps>`
   margin-left: ${props => props.ml || ''};
   margin-right: ${props => props.mr || ''};
 
+  padding-left: ${props => props.pl || ''};
+  padding-right: ${props => props.pr || ''};
 
-  ${props => {
-    if (props.px) {
-      return `
-        padding-left: ${props.px}
-        padding-right: ${props.px}
-    `
-    }
-  }}
 
-`;
+
+`

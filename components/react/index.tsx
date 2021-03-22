@@ -15,4 +15,5 @@ export {Footer} from '../footer';
 export {Menu} from '../menu';
 export {NavBar} from '../navbar';
 export {Pdp} from '../pdp';
+export {Select} from '../select';
 

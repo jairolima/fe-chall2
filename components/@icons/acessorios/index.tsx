@@ -1,7 +1,7 @@
-export function Acessorios() {
+export function Acessorios({mr}) {
 
     return (
-        <div>
+        <div style={{marginRight: `${mr}`}}>
             <svg xmlns="http://www.w3.org/2000/svg" width="23.683" height="9.868" viewBox="0 0 23.683 9.868">
                 <g id="reading" transform="translate(0 -149.334)">
                     <g id="Grupo_25554" data-name="Grupo 25554" transform="translate(0 149.334)">

@@ -16,7 +16,7 @@ interface HeadingProps {
 
 export const Heading = styled.h1<HeadingProps>`
   margin: 0;
-  color: ${props => props.color || ''};
+  color: ${props => props.color || props.theme.colors.gray400};
   font-style: normal;
   font-variant: normal;
   font-weight: ${props => props.weight || ''};

@@ -13,12 +13,12 @@ interface SimpleProps {
 
 
 export const SimpleGrid = styled.div<SimpleProps>`
-  display: "inline-grid";
+  display: grid;
 
   width: ${props => props.w || ''};
   height: ${props => props.h || ''};
 
-  grid-template-columns: ${props => props.templateColumns || ''};
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
   columns: ${props => props.columns || ''};
   gap: ${props => props.spacing || ''};
   column-gap: ${props => props.spacingX || ''};

@@ -10,7 +10,8 @@ const theme = {
       red100: "rgba(255, 0, 0, 1)",
 
       green100: "rgba(36, 201, 43, 1)",
-      green200: "rgba(9, 159, 15, 1)",
+      green200: "rgba(76, 175, 80, 1)",
+      green300: "rgba(9, 159, 15, 1)",
 
       pink100: "rgba(249, 30, 150, 1)",
       pink200: "rgba(246, 41, 150, 1)",

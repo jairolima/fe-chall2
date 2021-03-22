@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { Button, Box, Text, Center, Flex } from '../react/index'
+
+import { Box, Center, Flex } from '../react/index'
 import { Facebook, Instagram, Twitter, Youtube } from '../@icons/react'
 
 export function Footer() {
