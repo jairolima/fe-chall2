@@ -41,9 +41,9 @@ export default function Category({ category }: CategoryProps) {
             <Box centerContent mt="19px" mb="43px">
                 <Center>
 
-                    <Box w="1024px" h="56px" mt="19px" mb="16px">
-                        <Flex justify="space-between">
-                            <Heading weight="bold" fontSize="24px" lineHeight="30px">{router.query.name}</Heading>
+                    <Box desktopH="auto" desktopW="100%" w="1024px" h="56px" mt="19px" mb="16px">
+                        <Flex desktopH="auto" tabletDirection="column" justify="space-between">
+                            <Heading tabletFontSize="18px" weight="bold" fontSize="24px" lineHeight="30px">{router.query.name}</Heading>
                             {/* <Dropdown>
                                 <div className="dropdown">
                                     <button className="dropbtn">ordenar por <div className="Arrow"><Arrow /></div></button>
