@@ -24,4 +24,17 @@ export const SimpleGrid = styled.div<SimpleProps>`
   column-gap: ${props => props.spacingX || ''};
   row-gap: ${props => props.spacingY || ''};
 
+
+@media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+}
+@media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+}
+@media screen and (max-width: 425px) {
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+}
+
+
+
 `;

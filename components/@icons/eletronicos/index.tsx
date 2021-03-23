@@ -1,7 +1,7 @@
 export function Eletronicos({mr}) {
 
     return (
-        <div style={{marginRight: `${mr}`}}>
+        <div style={{marginRight: `${mr}`, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             <svg xmlns="http://www.w3.org/2000/svg" width="16.93" height="13.302" viewBox="0 0 16.93 13.302">
                 <g id="computer" transform="translate(-32 -80)">
                     <path id="Caminho_29819" data-name="Caminho 29819" d="M41.069,385.209H39.86A1.514,1.514,0,0,1,38.379,384H32v.72a1.1,1.1,0,0,0,1.094,1.094H47.836a1.1,1.1,0,0,0,1.094-1.094V384H42.551A1.514,1.514,0,0,1,41.069,385.209Z" transform="translate(0 -292.512)" fill="#7f7f7f" />

@@ -14,6 +14,8 @@ const A = styled.a`
 `
 
 
+
+
 export function Card({ id, title, price, image }) {
 
 
@@ -26,14 +28,14 @@ export function Card({ id, title, price, image }) {
                 </Box> */}
 
 
-                <Image
-                    className="img-radius"
-                    src={image}
-                    alt={title}
-                    width={328}
-                    height={203}
-                />
 
+                        <Image
+                            className="img-radius"
+                            src={image}
+                            alt={title}
+                            width={328}
+                            height={203}
+                        />
 
 
                 <Box h="145px" centerContent borderRadius="0px 0px 14px 14px">
@@ -41,8 +43,8 @@ export function Card({ id, title, price, image }) {
 
                         <Center w="328px" h="82px">
 
-                            <Text pr="14px" pl="14px" mt="12px" weight="500" fontSize="16px" lineHeight="19px" color="#000000b3">{title}</Text>
-                            <Text fontSize="22px" weight="700" lineHeight="25px">R${price}</Text>
+                            <Text pr="14px" pl="14px" weight="500" fontSize="16px" lineHeight="19px" color="#000000b3">{title}</Text>
+                            <Text fontSize="22px" mt="5px" weight="700" lineHeight="25px">R${price}</Text>
                         </Center>
 
                         <Center mb="27px">
@@ -56,7 +58,7 @@ export function Card({ id, title, price, image }) {
                         </Center>
                     </Box>
                 </Box>
-            </Box >
+            </Box>
         </>
     )
 

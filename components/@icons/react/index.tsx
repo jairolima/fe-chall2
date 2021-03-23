@@ -8,6 +8,7 @@ export {Inicio} from '../inicio';
 export {Acessorios} from '../acessorios';
 export {Roupas} from '../roupas';
 export {Eletronicos} from '../eletronicos';
+export {Arrow} from '../arrow';
 
 
 

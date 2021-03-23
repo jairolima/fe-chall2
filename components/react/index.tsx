@@ -12,8 +12,7 @@ export {Button} from '../button';
 export {Card} from '../card';
 export {Header} from '../header';
 export {Footer} from '../footer';
-export {Menu} from '../menu';
 export {NavBar} from '../navbar';
 export {Pdp} from '../pdp';
-export {Select} from '../select';
+export {Dropdown} from '../dropdown';
 

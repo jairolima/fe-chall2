@@ -7,10 +7,10 @@ export function Footer() {
 
     return (
         <>
-            <Box h="109px" bg="transparent linear-gradient(180deg, #FF0000 0%, #F91E96 100%) 0% 0% no-repeat padding-box">
+            <Box desktopW="100%" h="109px" bg="transparent linear-gradient(180deg, #FF0000 0%, #F91E96 100%) 0% 0% no-repeat padding-box">
                 <Center>
-                    <Box centerContent w="1024px" h="109px">
-                        <Flex w="40%" justify="space-around">
+                    <Box desktopW="100%" centerContent w="1024px" h="109px">
+                        <Flex tabletW="90%" w="40%" justify="space-around">
                             <Facebook />
                             <Instagram />
                             <Twitter />

@@ -17,4 +17,7 @@ export default createGlobalStyle`
   .img-radius-pdp {
     border-radius: 14px 14px 14px 14px;
   }
+  .hide {
+        display: none;
+  }
 `

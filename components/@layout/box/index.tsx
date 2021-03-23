@@ -5,6 +5,22 @@ interface BoxProps {
     bg?: string;
     w?: string;
     h?: string;
+
+    desktopW?: string;
+    desktopH?: string;
+
+    mobileDisplay?: string;
+
+    tabletDisplay?: string;
+    tabletPosition?: string;
+    tabletBottom?: string;
+
+
+    desktopDirection?: string;
+    desktopJustify?: string;
+
+
+
     borderRadius?: string;
     overflow?: string;
     shadow?: string;
@@ -12,6 +28,8 @@ interface BoxProps {
     mb?: string;
     ml?: string;
     mr?: string;
+
+    zIndex?: string;
 
     p?: string;
     pt?: string;
@@ -32,6 +50,11 @@ background: ${props => props.bg || ''};
 
 width: ${props => props.w || ''};
 height: ${props => props.h || ''};
+
+width: ${props => props.desktopW || ''};
+height: ${props => props.desktopH || ''};
+
+
 min-height: ${props => props.minH || ''};
 max-height: ${props => props.maxH || ''};
 
@@ -49,6 +72,28 @@ padding-top: ${props => props.pt || ''};
 padding-bottom: ${props => props.pb || ''};
 padding-left: ${props => props.pl || ''};
 padding-right: ${props => props.pr || ''};
+
+z-index: ${props => props.zIndex || ''};
+
+
+
+@media only screen and (max-width: 425px) {
+display: ${props => props.mobileDisplay || ''};
+}
+
+@media only screen and (max-width: 768px) {
+display: ${props => props.tabletDisplay || ''};
+position: ${props => props.tabletPosition || ''};
+bottom: ${props => props.tabletBottom || ''};
+}
+
+@media only screen and (max-width: 1024px) {
+    width: ${props => props.desktopW || ''};
+    height: ${props => props.desktopH || ''};
+    flex-direction: ${props => props.desktopDirection || ''};
+    justify-content: ${props => props.desktopJustify || ''};
+}
+
 
 
   ${props => {

@@ -4,6 +4,9 @@ interface HeadingProps {
     color?: string;
     weight?: string;
     fontSize?: string;
+
+    tabletFontSize?: string;
+
     lineHeight?: string;
 
     mt?: string;
@@ -28,5 +31,9 @@ export const Heading = styled.h1<HeadingProps>`
   margin-bottom: ${props => props.mb || ''};
   margin-left: ${props => props.ml || ''};
   margin-right: ${props => props.mr || ''};
+
+  @media only screen and (max-width: 768px) {
+    font-size: ${props => props.tabletFontSize || ''};
+}
 
 `;

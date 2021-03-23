@@ -28,12 +28,20 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const response = await fetch(`https://60520c72fb49dc00175b768c.mockapi.io/store/v1/products`);
     const data = await response.json();
 
-    const paths = data.map(product => {
-        return { params: { product: product.id } }
-    });
 
+    // Build all products
+    // const paths = data.map(product => {
+    //     return { params: { product: product.id } }
+    // });
+
+
+    // Build only top 3 products of my website
     return {
-        paths,
+        paths: [
+            { params: { product: '1' } },
+            { params: { product: '2' } },
+            { params: { product: '3' } }
+          ],
         fallback: true,
     }
 }
