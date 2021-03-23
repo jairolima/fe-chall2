@@ -1,3 +1,4 @@
+...
 You have to use Next Js as your framework.
 Use typescript.
 The buttons, cards and detailed products must be Reusable Components.
