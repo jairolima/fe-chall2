@@ -4,7 +4,7 @@ import { Heading, Card, Box, Flex, SimpleGrid, Header, Footer, Center, NavBar, D
 import { useRouter } from 'next/router';
 import Arrow from '../'
 
-export interface Products {
+export interface Category {
     map: any;
     sort: any;
     id: number;
@@ -15,46 +15,22 @@ export interface Products {
     image: string;
 }
 
-export interface ProductsProps {
-    category?: Products;
+export interface CategoryProps {
+    category?: Category;
 }
 
-export default function Category({ category }: ProductsProps) {
+export default function Category({ category }: CategoryProps) {
 
     const router = useRouter()
 
     console.log(router)
+
 
     const { isFallback } = useRouter();
 
     if (isFallback) {
         return <p>Carregando...</p>;
     }
-
-
-    // TODO create a component to order dropdown
-    // const [currentOrder, setCurrentOrder] = useState("ordenar por");
-
-    // function handleOrder() {
-
-    //     switch (currentOrder) {
-    //         case "menor preço":
-    //             return function (a, b) {
-    //                 return a.price - b.price;
-    //             }
-    //             case "a - z":
-    //             return function (a, b) {
-    //                 return a.length - b.length;
-    //             }
-    //             case "mais recentes":
-    //             return function (a, b) {
-    //                 return a.length - b.length;
-    //             }
-    //             default:
-    //             break;
-    //     }
-
-    // }
 
 
     return (
@@ -68,16 +44,16 @@ export default function Category({ category }: ProductsProps) {
                     <Box w="1024px" h="56px" mt="19px" mb="16px">
                         <Flex justify="space-between">
                             <Heading weight="bold" fontSize="24px" lineHeight="30px">{router.query.name}</Heading>
-                            <Dropdown>
-                            <div className="dropdown">
+                            {/* <Dropdown>
+                                <div className="dropdown">
                                     <button className="dropbtn">ordenar por <div className="Arrow"><Arrow /></div></button>
                                     <div className="dropdown-content">
-                                        <a href="#">menor preço</a>
-                                        <a href="#">a - z</a>
-                                        <a href="#">mais recentes</a>
+                                        <a href="#TODO">menor preço</a>
+                                        <a href="#TODO">a - z</a>
+                                        <a href="#TODO">mais recentes</a>
                                     </div>
                                 </div>
-                            </Dropdown>
+                            </Dropdown> */}
                         </Flex>
                     </Box>
 
@@ -96,9 +72,12 @@ export default function Category({ category }: ProductsProps) {
     )
 }
 
+
+// Generate static categories ->
 export const getStaticPaths: GetStaticPaths = async () => {
     const response = await fetch(`https://60520c72fb49dc00175b768c.mockapi.io/store/v1/category`);
     const data = await response.json();
+
 
     const paths = data.map(category => {
         return { params: { category: category.id } }
@@ -107,7 +86,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
     return {
         paths,
         fallback: true,
-    }
+      }
+
+    // Build only top 1 category of my website
+    // return {
+    //     paths: [
+    //         { params: { category: '3' } }
+    //     ],
+    //     fallback: true,
+    // }
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {

@@ -24,9 +24,11 @@ export default function Product({ product }) {
     )
 }
 
+
+
 export const getStaticPaths: GetStaticPaths = async () => {
-    const response = await fetch(`https://60520c72fb49dc00175b768c.mockapi.io/store/v1/products`);
-    const data = await response.json();
+    // const response = await fetch(`https://60520c72fb49dc00175b768c.mockapi.io/store/v1/products`);
+    // const data = await response.json();
 
 
     // Build all products

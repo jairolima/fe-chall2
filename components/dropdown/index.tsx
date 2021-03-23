@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 
@@ -66,8 +66,6 @@ export const Drop = styled.div`
 `
 
 export function Dropdown({children}) {
-
-const [currentOption, setCurrentOption] = useState("ordenar por");
 
     return (
         <Drop>

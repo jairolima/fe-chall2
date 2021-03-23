@@ -19,20 +19,7 @@ export interface ProductsProps {
 export default function Home({ products }: ProductsProps) {
 
 
-    const [productList, setProductList] = useState<any>(products);
-
-    const sortByPrice = () => {
-        const productListArray = [productList]
-        console.log(productList)
-        const sorted = [...productListArray].sort(function (a, b) {
-            return a.price - b.price;
-        });
-        setProductList(sorted);
-    };
-
-
-
-    const [currentOrder, setCurrentOrder] = useState("ordenar por");
+     const [currentOrder, setCurrentOrder] = useState("ordenar por");
 
     function handleOrder() {
 
@@ -41,16 +28,17 @@ export default function Home({ products }: ProductsProps) {
                 return function (a, b) {
                     return a.price - b.price;
                 }
-                case "a - z":
+            case "a - z":
                 return function (a, b) {
-                    return a.length - b.length;
+                    return a.title.length - b.title.length;
                 }
-                case "mais recentes":
+            case "mais recentes":
                 return function (a, b) {
-                    return a.length - b.length;
+                    return a.title.length - b.title.length;
                 }
-                default:
+            default:
                 break;
+
         }
 
     }
@@ -85,7 +73,7 @@ export default function Home({ products }: ProductsProps) {
 
                     <SimpleGrid spacingX="20px" spacingY="28px">
                         {products.sort(handleOrder()).map((product, index) => (
-                            <Card key={index} id={product.id} title={product.title} price={product.price} image={!product.image ? 'https://cdn2.iconfinder.com/data/icons/e-commerce-line-4-1/1024/open_box4-512.png' : product.image} />
+                            <Card key={index} id={product.id} title={product.title} price={product.price} image={product.image} />
                         ))}
                     </SimpleGrid>
                 </Center>
