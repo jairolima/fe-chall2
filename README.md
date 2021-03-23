@@ -1,4 +1,4 @@
 
-How to run?
-## yarn install 
-## yarn dev
+## How to run?
+yarn install 
+yarn dev
