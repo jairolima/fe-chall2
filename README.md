@@ -1,4 +1,5 @@
 
 ## How to run?
-yarn install 
+yarn install
+
 yarn dev
