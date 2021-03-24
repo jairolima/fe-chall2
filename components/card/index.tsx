@@ -48,7 +48,7 @@ export function Card({ id, title, price, image }) {
                         </Center>
 
                         <Center mb="27px">
-                            <Link href='product/[id]' as={`product/${id}`}>
+                            <Link href='/product/[id]' as={`/product/${id}`}>
                                 <A>
                                     <Button>
                                         ver produto
